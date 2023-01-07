@@ -70,27 +70,27 @@ public class Main {
             };
         } else if (number < 1000) {
             word5 = switch ((number - (number % 100)) / 100) {
-                case 1 -> "one hundred and ";
-                case 2 -> "two hundred and ";
-                case 3 -> "three hundred and ";
-                case 4 -> "four hundred and ";
-                case 5 -> "five hundred and ";
-                case 6 -> "six hundred and ";
-                case 7 -> "seven hundred and ";
-                case 8 -> "eight hundred and ";
-                case 9 -> "nine hundred and ";
+                case 1 -> "one hundred ";
+                case 2 -> "two hundred ";
+                case 3 -> "three hundred ";
+                case 4 -> "four hundred ";
+                case 5 -> "five hundred ";
+                case 6 -> "six hundred ";
+                case 7 -> "seven hundred ";
+                case 8 -> "eight hundred ";
+                case 9 -> "nine hundred ";
                 default -> "";
             };
             word6 = switch (((number%100)-((number%100)%10))/10) {
-                case 1 -> "ten";
-                case 2 -> "twenty";
-                case 3 -> "thirty";
-                case 4 -> "forty";
-                case 5 -> "fifty";
-                case 6 -> "sixty";
-                case 7 -> "seventy";
-                case 8 -> "eighty";
-                case 9 -> "ninety";
+                case 2 -> "and twenty";
+                case 3 -> "and thirty";
+                case 4 -> "and forty";
+                case 5 -> "and fifty";
+                case 6 -> "and sixty";
+                case 7 -> "and seventy";
+                case 8 -> "and eighty";
+                case 9 -> "and ninety";
+                case 1 ->"ten";
                 default -> "";
             };
             word7 = switch (number % 10) {
@@ -108,14 +108,5 @@ public class Main {
 
         }
         System.out.println(word1+word2+word3+word4+word5+word6+word7);
-//
-//        if (number < 1000) {
-//            System.out.println(word5 + word6 + word7);
-//        }
-//        if (number > 20) {
-//            System.out.println(word3 + word4);
-//        } else {
-//            System.out.printf(word1 + word2);
-//        }
     }
 }
